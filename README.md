@@ -7,7 +7,7 @@ The initial challenge we will tackle in this project is addressing the issue of 
 The second challenge we will address is the comparison of the performance of Random Forest and SVM, specifically when most of the data in the dataset is discrete. We will investigate the possibility of utilizing ensemble methods to boost the accuracy of our models.
 
 ## Dataset
-The dataset contains diverse data formats, with most being discrete, such as site level, job site name, sign-off type, etc. The dataset also has continuous attributes, like incident duration, and includes time series, such as incident date and employee creation date. Additionally, the dataset has missing values and redundant attributes across tables.
+The dataset contains diverse data formats, with most being text, such as site level, job site name, sign-off type, etc. The dataset also has discrete values, like incident duration, and includes time series, such as incident date and employee creation date. Additionally, the dataset has missing values and redundant attributes across tables.
 
 - [introduction of database schema](documents/database_schema.md)
 ## Feature Engineering
