@@ -1,6 +1,6 @@
 # Project Summary
 ## Introduction
-The selected topic involves collaborating with Sofvie Inc. on an industrial project that uses machine learning algorithms 
+The selected topic involves collaborating with Sofvie Inc. on an industrial project that uses machine learning algorithms to classify incidents type based on given data.
 The input of the project is the dataset which is provided by Sofvie Inc., in the form of a MySQL database, which comprises a wide range of information, not limited to the data required for the above-mentioned goal. The output of the algorithms and analysis will take the form of JSON data, as it is necessary to integrate this data into the current systems to facilitate further analysis and decision-making.
 
 ## Dataset Introduction
