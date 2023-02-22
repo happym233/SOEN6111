@@ -1,6 +1,7 @@
 # Project Summary
 ## Introduction
-The selected topic involves collaborating with Sofvie Inc. on an industrial project that utilizing machine learning algorithms to classify the types of incidents based on the provided data. 
+The selected topic involves collaborating with Sofvie Inc. on an industrial project that utilizing machine learning algorithms to classify the types of incidents based on the provided data. The primary aim of this project is to employ machine learning algorithms to categorize incidents according to data in given 
+MySQL database. The input of the project comprises a wide range of information, not limited to the data required for the above-mentioned goal and the output of the algorithms and analysis will take the form of JSON data to facilitate further analysis.
 
 The initial challenge we will tackle in this project is addressing the issue of dealing with a dataset that has a vast number of columns. In order to enhance the effectiveness of our model, we will need to implement methods that help to reduce the dimensions of the dataset.
 
