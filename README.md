@@ -1,8 +1,7 @@
 # Project Summary
 ## Introduction
-The selected topic involves collaborating with Sofvie Inc. on an industrial project that uses machine learning algorithms to classify incidents type based on given data.
-The input of the project is the dataset which is provided by Sofvie Inc., in the form of a MySQL database, which comprises a wide range of information, not limited to the data required for the above-mentioned goal. The output of the algorithms and analysis will take the form of JSON data, as it is necessary to integrate this data into the current systems to facilitate further analysis and decision-making.
-
+The selected topic involves collaborating with Sofvie Inc. on an industrial project that utilizing machine learning algorithms to classify the types of incidents based on the provided data. 
+ Our approach to this project will involve key steps, including data querying, feature engineering, and constructing machine learning models including Support Vector Machine (SVM) and Random Forest. We will also perform a comparison of the performance of these two models to identify differences. Additionally, we will investigate the impact of fine-tuning on the performance of the machine learning models.
 ## Dataset Introduction
 We need to obtain and extract the dataset from a MySQL database that comprises seven schemas and over 20 tables relevant to our task with SQL query. For the classification task, the RootCauseAnalysis table provides the label.
 The dataset contains diverse data formats, with most being discrete, such as site level, job site name, sign-off type, etc. The dataset also has continuous attributes, like incident duration, and includes time series, such as incident date and employee creation date. Additionally, the dataset has missing values and redundant attributes across tables.
