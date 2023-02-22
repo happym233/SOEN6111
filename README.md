@@ -1,10 +1,10 @@
 # Project Summary
 ## Introduction
-The selected topic involves collaborating with Sofvie Inc. on an industrial project that utilizing machine learning algorithms to classify the types of incidents based on the provided data.  The input of the project comprises a wide range of information, not limited to the data required for the above-mentioned goal and the output of the algorithms and analysis will take the form of JSON data to facilitate further analysis.
+The selected topic involves collaborating with Sofvie Inc. on an industrial project that utilizing machine learning algorithms to classify the types of incidents based on the provided data.  The input of the project comprises a wide range of information, not limited to the data required for the goal and the output of the algorithms and analysis will take the form of JSON data to facilitate further analysis.
 
 The initial challenge we will tackle in this project is addressing the issue of dealing with a dataset that has a vast number of columns. In order to enhance the effectiveness of our model, we will need to implement methods that help to reduce the dimensions of the dataset.
 
-The second challenge we will address is the comparison of the performance of Random Forest and SVM, specifically when most of the data in the dataset is discrete. We will investigate the possibility of utilizing ensemble methods to boost the accuracy of our models.
+The second challenge we will address is the comparison of the performance of Random Forest and SVM, specifically when most of the data in the dataset is discrete. We will also investigate the possibility of utilizing ensemble methods to boost the accuracy of our models.
 
 ## Dataset
 The given MySQL database include 7 schemas and 30 tables relevant to our task. Incidents are classified into 11 types, with their supervisor, potential cause, sign-off information are provided.
