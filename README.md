@@ -9,7 +9,7 @@ The dataset contains diverse data formats, with most being discrete, such as sit
 
 - [introduction of database schema](documents/database_schema.md)
 ## Feature Engineering
-In order to enhance the performance of our model, we will carry out several operations on the provided data. Firstly, we will remove irrelevant data from the given schema that is either unrelated or does not align with our model. This will help to reduce the dimensionality of the dataset. Additionally, we will address missing values by manually filling them with appropriate values that are suitable for our model.
+In order to enhance the performance of our model, we will carry out several operations on the provided data. Firstly, we will remove irrelevant data from the given schema that is either unrelated or does not align with our model. This will help to reduce the dimensionality of the dataset. Additionally, we will address missing values by filling them with appropriate values that are suitable for our model.
 
 Furthermore, we will replace certain values in the given data, such as labels, text, or time series, by converting them to a format that our model can comprehend. For numerical values, we may need to normalize or standardize the data to ensure that they have the same scale and distribution.
 ## Model Description
