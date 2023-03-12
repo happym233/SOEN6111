@@ -4,7 +4,7 @@ import pandas as pd
 
 class DatabaseConnection:
     def __init__(self):
-        self.pwd = 'pwd'
+        self.pwd = "mEHpc1Nu"
         self.url = f"mysql+pymysql://student1:{self.pwd}@159.203.63.26/sofvie_test"
         self.con = None
 
