@@ -63,7 +63,7 @@ class TableNode:
         while len(queue) != 0:
             node = queue.pop(0)
             # print(node.table_name)
-            if i != 0 and len(node.selected_columns) != 0:
+            if i != 0 and len(node.selected_columns) != 0 and len(select_str) != 0:
                 select_str += ',\n'
             add_and = False
             if len(where_str) != 0:
@@ -78,7 +78,7 @@ class TableNode:
                             + child_node.table_as_name + "." + child[0][1] + "\n"
                 from_str += child_node.get_from_following()
             i += 1
-        return "select " + select_str + "\nfrom " + from_str + "where " + where_str
+        return "select distinct " + select_str + "\nfrom " + from_str + "where " + where_str
 
 def generate_sql():
     incident_table = TableNode({'ID': 'IncidentId', 'IncidentNumber': None, 'CreationDate': 'IncidentCreationDate'}, 'Incidents', 'incidents', {})
