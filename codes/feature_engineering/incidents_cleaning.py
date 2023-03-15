@@ -10,7 +10,7 @@ def aggregate_to_list(x, remove_words=[]):
                 break
         if i not in list and not removeI:
             list.append(i)
-    return list
+    return ','.join([str(i) for i in list])
 
 
 def clear_wordList_from_column(data, column_name, word_list):
