@@ -60,11 +60,9 @@ if __name__ == '__main__':
     print(incident_sql)
     print(incident_type_sql)
     print(supervisor_sql)
-    """
     data = database.run_sql(incident_sql)
     data.to_csv('../resources/incidents.csv', encoding='utf-8', index=False)
     data = database.run_sql(incident_type_sql)
     data.to_csv('../resources/incidents_type.csv', encoding='utf-8', index=False)
     data = database.run_sql(supervisor_sql)
     data.to_csv('../resources/supervisor.csv', encoding='utf-8', index=False)
-    """
