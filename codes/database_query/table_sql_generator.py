@@ -1,5 +1,6 @@
 from database_connection import DatabaseConnection
 
+
 class TableNode:
     def __init__(self, selected_columns, table_name, table_as_name, children):
         self.selected_columns = selected_columns
@@ -51,6 +52,8 @@ class TableNode:
                 if i != 0 or add_and:
                     str += "and "
                 i = i + 1
+                str += "lt_" + value[0] + ".ltr_tag_type = rld_" + value[0] + ".rld_tag_type"
+                str += " and "
                 str += "lt_" + value[0] + ".ltr_lng_id = 1\n"
         return str
 
@@ -80,11 +83,12 @@ class TableNode:
             i += 1
         return "select distinct " + select_str + "\nfrom " + from_str + "where " + where_str
 
+
 def generate_sql():
     incident_table = TableNode({'ID': 'IncidentId'}, 'Incidents', 'incidents', {})
     root_cause_analysis_table = TableNode({'PreliminaryTypeId': ('PreliminaryType',),
-                                           'ActualTypeId': ('actualType', ),
-                                           'IncidentTypeId': ('incidentType', )},
+                                           'ActualTypeId': ('actualType',),
+                                           'IncidentTypeId': ('incidentType',)},
                                           'RootCauseAnalysis', 'rca', {})
     incident_table.children = [(("ID", "IncidentId"), root_cause_analysis_table)]
     return incident_table.to_sql()
@@ -92,14 +96,20 @@ def generate_sql():
 
 if __name__ == '__main__':
     sql = generate_sql()
-    print(sql)
-    emp_training_table = TableNode({'etr_training_type_id': ('etr_training_type',), 'etr_training_institution_id': ('etr_training_institution', ),
-                                    'etr_training_code_id': ('etr_training_code',), 'etr_completion_date': None, 'etr_training_status_id': ('etr_training_status',)}, 'employee_training', 'emp_train', {})
-    #print(emp_training_table.to_sql())
+    emp_training_table = TableNode(
+        {'etr_training_type_id': ('etr_training_type',), 'etr_training_institution_id': ('etr_training_institution',),
+         'etr_training_code_id': ('etr_training_code',), 'etr_completion_date': None,
+         'etr_training_status_id': ('etr_training_status',)}, 'employee_training', 'emp_train', {})
+    print(emp_training_table.to_sql())
+    print("========================================================================================")
     emp_site_table = TableNode({'esi_sit_id': ('emp_site',)}, 'employee_site', 'emp_site', {})
-    # print(emp_site_table.to_sql())
+    print(emp_site_table.to_sql())
+
+    print("========================================================================================")
     emp_job_table = TableNode({'ejo_job_id': ('emp_job',)}, 'employee_job', 'emp_job', {})
-    # print(emp_job_table.to_sql())
+    print(emp_job_table.to_sql())
+    """
     database = DatabaseConnection()
     data = database.run_sql(sql)
     data.to_csv('incidents_type.csv', encoding='utf-8', index=False)
+    """

@@ -3,8 +3,8 @@ import pymysql
 import pandas as pd
 
 class DatabaseConnection:
-    def __init__(self):
-        self.pwd = "mEHpc1Nu"
+    def __init__(self, pwd):
+        self.pwd = pwd
         self.url = f"mysql+pymysql://student1:{self.pwd}@159.203.63.26/sofvie_test"
         self.con = None
 
@@ -18,7 +18,10 @@ class DatabaseConnection:
         data = pd.read_sql(sql, con=self.con)
         return data
 
+    def close(self):
+        self.con.close()
+
 if __name__ == '__main__':
-    database = DatabaseConnection()
+    database = DatabaseConnection("mEHpc1Nu")
     data = database.run_sql("""select * from employee_training""")
     print(data.head(5))

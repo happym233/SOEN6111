@@ -1,4 +1,7 @@
 # [Project Summary](https://docs.google.com/presentation/d/1krx4c0BcLJ1fHRKvQihBJcpjJOO7cpECJzU_XZV4w7Y/edit?usp=sharing)
+
+## [Jupyter](jupyter/Project_6_Team_2.ipynb)
+
 ## Introduction
 The selected topic involves collaborating with Sofvie Inc. on an industrial project that utilizing machine learning algorithms to classify the types of incidents based on the provided data.  The input of the project comprises a wide range of information, not limited to the data required for the goal and the output of the algorithms and analysis will take the form of JSON data to facilitate further analysis.
 

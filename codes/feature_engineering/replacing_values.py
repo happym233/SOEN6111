@@ -26,8 +26,8 @@ if __name__ == '__main__':
     incident_data['emp_pos_cnt'] = incident_data['emp_pos'].apply(lambda x: len(str(x).split(',')) if x is not None else 1)
     incident_data['emp_site_cnt'] = incident_data['emp_site'].apply(lambda x: len(str(x).split(',')) if x is not None else 1)
     print(incident_data["site"].unique())
-    #site_one_hot = pd.get_dummies(incident_data["site"])
-    #incident_data = pd.concat([incident_data, site_one_hot], axis=1)
+    site_one_hot = pd.get_dummies(incident_data["site"])
+    incident_data = pd.concat([incident_data, site_one_hot], axis=1)
     print(incident_data["emp_pos"].unique())
     incident_data = incident_data.drop(['IncidentNumber', 'IncidentCreationDate', 'site', 'per_id', 'PotentialLoss', 'PreliminaryType', 'actualType', 'per_dob',
                         'per_dob', 'per_first_name', 'per_middle_name', 'per_last_name', 'emp_start_date', 'emp_pos', 'emp_site',
